@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forecast</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='forecast.js') }}" defer></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Forecast for: <span id="dataset-name"></span></h1>
+
+    <form id="forecast-form">
+        <input type="hidden" id="dataset_name" name="dataset_name" >
+        <input type="text" id="dependent_col" name="dependent_col" placeholder="Dependent Column" required>
+        <input type="number" id="steps" name="steps" placeholder="Steps" required>
+        <button type="submit">Get Forecast</button>
+    </form>
+
+    <div id="forecast-result"></div> <!-- Keep ONLY ONE of these -->
+</div>
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Model Evaluation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='evaluate.js') }}" defer></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Evaluate Models for: <span id="dataset-name"></span></h1>
+
+
+
+<form id="evaluate-form">
+    <input type="hidden" id="dataset_name" name="dataset_name" required>
+    <input name="dependent_col" value="close_price" required>
+    <button type="submit">Evaluate Models</button>
+</form>
+
+
+
+    <div id="evaluate-result"></div>
+</div>
+
+</body>
+</html>

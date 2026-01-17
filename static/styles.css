@@ -1,0 +1,198 @@
+/* ======= Global Styling ======= */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(ellipse at top, #0b1c3d, #060d22);
+    color: #e0e6f1;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    text-align: center;
+}
+
+h1, h2, h3, h4 {
+    margin: 20px 0 10px;
+    color: #f0f4ff;
+}
+
+/* ======= Main Container ======= */
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 40px auto;
+    background: rgba(20, 30, 48, 0.85);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* ======= Forms ======= */
+form {
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, select, button {
+    width: 100%;
+    max-width: 450px;
+    padding: 15px;
+    margin: 12px 0;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: #e0e6f1;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input::placeholder, select {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #33bbff;
+    box-shadow: 0 0 12px rgba(51, 187, 255, 0.5);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ======= Buttons ======= */
+button, .dataset-btn, .button-group a {
+    background: linear-gradient(135deg, #005bea, #00c6fb);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 22px;
+    font-size: 16px;
+    text-decoration: none;
+    margin: 12px 0;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    display: inline-block;
+}
+
+button:hover, .dataset-btn:hover, .button-group a:hover {
+    background: linear-gradient(135deg, #003d99, #0099cc);
+    transform: translateY(-4px);
+    box-shadow: 0 4px 14px rgba(0, 204, 255, 0.5);
+}
+
+/* ======= Dataset List Buttons ======= */
+.dataset-btn {
+    display: inline-block;
+    margin: 10px;
+}
+
+/* ======= Button Group ======= */
+.button-group {
+    margin-top: 40px;
+}
+
+.button-group a {
+    display: block;
+    margin: 15px auto;
+    width: 85%;
+}
+
+/* ======= Preformatted Text (API responses) ======= */
+pre {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 18px;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow-x: auto;
+    max-height: 350px;
+    color: #e0e6f1;
+    margin-top: 20px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+/* ======= Data Tables ======= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+table, th, td {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+th, td {
+    padding: 14px;
+    text-align: center;
+    font-size: 15px;
+    color: #e0e6f1;
+}
+
+th {
+    background: rgba(0, 153, 255, 0.7);
+    color: #fff;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+tr:hover {
+    background: rgba(0, 153, 255, 0.2);
+    transition: background 0.2s ease-in-out;
+}
+
+/* ======= Cards for Forecast/Evaluation/EDA Results ======= */
+.result-card {
+    padding: 25px;
+    margin: 30px auto;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 14px;
+    width: 92%;
+    max-width: 850px;
+    text-align: left;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.result-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.7);
+}
+
+.result-card h4 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #f0f4ff;
+}
+
+.result-card p {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+/* ======= Responsive Layout ======= */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    input, select, button {
+        max-width: 100%;
+    }
+
+    .button-group a {
+        width: 100%;
+    }
+
+    .result-card {
+        width: 100%;
+        padding: 20px;
+    }
+}

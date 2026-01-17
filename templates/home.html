@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Time-Series Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='home.js') }}" defer></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>AI-powered Time-Series Forecasting</h1>
+    <p class="subtitle">Fetch new data or continue working with existing datasets.</p>
+
+    <!-- Fetch Data Section -->
+    <section>
+        <h2> Fetch New Data from API</h2>
+        <form id="fetch-form">
+            <input type="text" name="api_url" placeholder="API URL (e.g., https://api.example.com/data)" required>
+            <input type="text" name="dataset_name" placeholder="Dataset Name (e.g., stock_data_2024)" required>
+            <button type="submit">Fetch Data</button>
+        </form>
+        <pre id="fetch-result">Enter API details and click "Fetch Data" to begin.</pre>
+    </section>
+
+    <!-- Existing Datasets Section -->
+    <section>
+        <h2>Choose Existing Dataset</h2>
+        <div id="dataset-list">
+            <p>Loading available datasets...</p> <!-- Placeholder -->
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>

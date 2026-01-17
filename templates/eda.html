@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EDA Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='eda.js') }}" defer></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>EDA for: <span id="dataset-name"></span></h1>
+
+    <form id="eda-form">
+        <input type="hidden" id="dataset_name" name="dataset_name">
+        <input name="dependent_col" value="close_price">
+        <label>Moving Average Window:</label>
+        <select name="moving_avg_window">
+            <option value="7">7 Days</option>
+            <option value="14">14 Days</option>
+            <option value="30">30 Days</option>
+        </select>
+        <label>Heatmap Type:</label>
+        <select name="heatmap_window">
+            <option value="weekly_vs_hours">Weekly vs Hours</option>
+            <option value="weeks_vs_months">Weeks vs Months</option>
+            <option value="hours_vs_months">Hours vs Months</option>
+        </select>
+        <button type="submit">Run EDA</button>
+    </form>
+
+    <div id="eda-result"></div>
+</div>
+
+</body>
+</html>

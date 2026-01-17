@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dataset Actions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Dataset: <span id="dataset-name"></span></h1>
+
+    <div class="button-group">
+        <a href="#" id="eda-link">Perform EDA</a>
+        <a href="#" id="forecast-link">Forecast</a>
+        <a href="#" id="evaluate-link">Evaluate Models</a>
+        <a href="#" id="view-link">View Dataset</a>
+    </div>
+</div>
+
+</body>
+</html>
