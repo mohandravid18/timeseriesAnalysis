@@ -1,0 +1,68 @@
+
+📊 Time-Series Forecasting Web Application  
+Documentation: Approach and Methodology
+
+---
+Overview:
+This project is a full-stack **time-series forecasting application** that allows users to:
+- Fetch data from external APIs (e.g., weather, stock).
+- Store data in a local SQLite database.
+- Perform **EDA** (Exploratory Data Analysis) with visualizations.
+- Train and apply multiple forecasting models.
+- Evaluate model performance.
+- Display forecasts in a web interface.
+
+---
+Tech Stack:
+| Component       | Tools Used                                     |
+|-----------------|------------------------------------------------|
+| Backend         | Flask, SQLite, Pandas, NumPy                   |
+| Forecast Models | ARIMA, SARIMA, Random Forest, XGBoost          |
+| Frontend        | HTML, CSS, JavaScript (Vanilla)                |
+| Visualization   | Matplotlib, Seaborn                            |
+| Deployment      | Gunicorn, Procfile (Heroku or similar)         |
+
+---
+Methodology:
+
+A. Data Collection:
+- Users provide an API URL and dataset name.
+- Data is fetched using `requests` and stored in SQLite.
+- The database stores timestamps, JSON-formatted data, and column keys.
+
+B. Data Preprocessing:
+- Data is retrieved via SQL queries.
+- JSON data is normalized and merged with timestamps.
+- Missing values handled with forward/backward filling.
+- Data sorted chronologically.
+
+C. Exploratory Data Analysis (EDA):
+- Visualizations include:
+  - Time series line plots.
+  - Moving averages.
+  - Seasonality heatmaps.
+- Tools: `matplotlib`, `seaborn`.
+
+D.Forecasting Models
+| Model           | Methodology                                  |
+|-----------------|----------------------------------------------|
+| **ARIMA**       | Uses `statsmodels`, models trends, autocorrelation. |
+| **SARIMA**      | Adds seasonal components (monthly/weekly cycles). |
+| **Random Forest** | Trained on lagged values (lag 1-3) for regression. |
+| **XGBoost**     | Similar to RF but with boosting for better accuracy. |
+
+Each model forecasts a user-specified number of steps (future values).  
+ARIMA/SARIMA also generate confidence intervals.
+
+E. Forecast Display:
+- Forecast results are returned via Flask API in JSON.
+- Frontend renders forecast tables with:
+  - Step, Forecast, Lower Bound, Upper Bound (if available).
+
+F. Model Evaluation:
+- Metrics: MAE, RMSE, MAPE.
+- Comparative model performance is shown to guide user selection.
+
+---
+
+

@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "api/*.py": {
+      "runtime": "python@latest"
+    }
+  },
+  "ignoreFiles": [
+    "__pycache__/",
+    "venv/",
+    "node_modules/",
+    "*.log"
+  ]
+}
